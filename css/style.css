@@ -1,0 +1,290 @@
+@font-face {
+    font-family: BanzaiBros;
+    src: url(../fonts/BanzaiBros.ttf);
+ }
+
+ @font-face {
+    font-family: Capriola;
+    src: url(../fonts/Capriola-Regular.ttf);
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Capriola', sans-serif;
+    font-size: 1.25rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background:  #461C58;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1rem; /* espacamento interno */
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.75rem;
+    margin: 0.625rem;
+    font-family: 'BanzaiBros';
+    color: #00B49D;
+}
+
+h3{
+    margin-bottom: 20px;
+    color: #FFC20D;
+}
+
+h4{
+    font-size: xx-large;
+    color: #FFC20D;
+}
+
+#name{
+    margin-bottom: 20px;
+}
+
+
+#name input {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 10px;
+    color: #461C58;
+}
+
+#name input::placeholder {
+    color: #be25ff;
+}
+
+#name button{
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #00B49D;
+    padding: 10px;
+    color: #461C58;
+    transition: 0.1s;
+}
+
+#name button:hover{
+    background-color: #461C58;
+    color: #FFC20D;
+    transform: scaleX(1.2);
+}
+
+
+.centro {
+    text-align: center;
+}
+
+.questao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#numQuestao {
+    display: block;
+    background: #00B49D;
+    padding: 0px 10px 2px 10px;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+#pergunta {
+    margin-left: 1rem;
+    font-size: 22px;
+}
+
+#jogoequestoes{
+    display: flex;
+}
+
+
+/* article que acomoda a questao completa */
+.questoes {
+    padding: 1.5rem;
+    border-radius: 0 20px 20px 20px;
+    margin-bottom: 2rem;
+    background: #FFC20D;
+    color: #461C58 ;
+    max-width: 700px;
+    min-height: 550px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.267);
+}
+
+.game{
+    padding: 1.5rem;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game span{
+    color: #FFC20D;
+    font-size: 40px;
+}
+
+.game p{
+    width: 100%;
+}
+
+#shipenemy{
+    border-radius: 20px 0 0 20px;
+    background: #a040c9 ;
+    min-width: 500px;
+    max-height: 500px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.267);
+    border-right: 5px dashed #461C58 ;
+}
+
+.enemy{
+    width: 50px;
+    height: 50px;
+    margin: 3%;
+    
+}
+
+.gameship{
+    display: flex;
+    width: 500px;
+    height: 250px;
+    align-items: flex-end;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+.ship{
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+
+.questoes ol li {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: 300ms;
+    font-size: 20px;
+}
+
+.questoes ol li:hover {
+    background: #00B49D;
+    color: #461C58;
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.bloqueado {
+    display: none;
+}
+
+.bloqueado li:hover {
+    display: none;
+}
+
+#instrucoes {
+    background: white;
+    color: #461C58;
+    padding: 0.625rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    animation: piscar .75s infinite alternate;
+}
+
+#aviso {
+    color: #00B49D;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+/* ANIMACAO */
+
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px#00B49D);
+        -webkit-filter: drop-shadow(0 0 15px #00B49D);
+        -moz-filter: drop-shadow(0 0 15px #00B49D);
+        -o-filter: drop-shadow(0 0 15px #00B49D);
+        -ms-filter: drop-shadow(0 0 15px #00B49D);
+    }
+    100% {
+    }
+}
+
+.animar {
+    animation: piscar .75s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer .5s infinite alternate;
+}
+
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+
+@keyframes treme {
+    0% {margin-left: 0;}
+    25% {margin-left: 15px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -15px;}
+    100% {margin-left: 0;}
+  }
+
+  @keyframes treme1 {
+    0% {margin-top: 0;}
+    25% {margin-top: 2px;}
+    50% {margin-top: 0;}
+    75% {margin-top: 2px;}
+    100% {margin-top: 0;}
+  }
+
+
+ @media (min-width: 120px) {
+    #jogoequestoes{
+      flex-direction: column-reverse;
+  }
+  
+}
+
+@media (min-width: 769px) {
+    #jogoequestoes{
+      flex-direction: row;
+  }
+}

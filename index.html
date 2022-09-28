@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champagnat Quiz</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <audio id="correct"><source src="sounds/correct.wav"></audio>
+    <audio id="wrong"><source src="sounds/error.wav"></audio>
+    <main class="tela-principal">
+
+      
+
+        <section class='conteudos'>
+
+            <h1>Champagnat Quiz</h1>
+            <h4>“A volta ao mundo em 80 dias”</h4> <h3>Julio Verne</h3>
+           
+            <div id="name">
+                <p id="textname"> Digite o seu nome: <input type="text" id="nomealuno" placeholder="Insira seu nome Aqui" ><button onclick="pegarNome()">Ok</button></p>
+               
+                
+
+            </div>
+           
+            <article class='centro' id='instrucoes'>
+                Leia a questão, clique na resposta correta e derrote seus inimigos!
+            </article>
+
+
+              <div id="jogoequestoes">
+                 <div id="shipenemy">
+                     <article class="game">
+                        <p>Pontos de vida: <span id="lifepoints">10</span></p>
+                        <img src="img/enemy.gif" class="enemy" id="e1">
+                        <img src="img/enemy.gif" class="enemy" id="e2">
+                        <img src="img/enemy.gif" class="enemy" id="e3">
+                        <img src="img/enemy.gif" class="enemy" id="e4">
+                        <img src="img/enemy.gif" class="enemy" id="e5">
+                        <img src="img/enemy.gif" class="enemy" id="e6">
+                        <img src="img/enemy.gif" class="enemy" id="e7">
+                        <img src="img/enemy.gif" class="enemy" id="e8">
+                        <img src="img/enemy.gif" class="enemy" id="e9">
+                        <img src="img/enemy.gif" class="enemy" id="e10">
+                     </article>
+           <article class="gameship">
+            <img src="img/ship.gif" class="ship">
+           </article>
+        </div>
+
+            <article class='questoes'>
+                
+                <header class='questao'>
+                    <span id='numQuestao'></span>
+                    <h2 id='pergunta'></h2>
+                </header>
+
+                <div class='corpo'>
+                    <ol type='A' id='alternativas'>
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                    </ol>
+                </div>
+            </article>
+            </div>
+            <article id='aviso'>Questão <span id='numero'></span> de <span id='total'></span></article>
+            
+        </section>
+
+        <footer class='centro'>Desenvolvido por Escola Champagnat - Pinhal &copy; 2022</footer>
+    </main>
+
+<!-- JS externo -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
